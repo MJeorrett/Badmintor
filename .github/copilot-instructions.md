@@ -1,0 +1,2 @@
+- Always write comments and documentation in full sentences e.g. with property punctuation including a full stop at the end.
+- Add to / edit HighLevelFeatures.md when anything comes up in discussion that is worth documenting.
