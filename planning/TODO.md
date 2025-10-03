@@ -1,49 +1,27 @@
-# Badmintor - TODO & Discussion Topics
+# Badmintor - High-Level Technical Decisions
 
 ## Technical Architecture Decisions
 
-- [ ] Backend/database technology (.NET Core + SQL Server vs alternatives for PWA/offline needs)
-- [ ] State management approach (Zustand vs Redux vs Context API - evaluate for this project)
-- [ ] UI framework choice (Material-UI, Tailwind, Ant Design, plain CSS) - deeper evaluation needed
-- [ ] Azure hosting/deployment strategy and services
-- [ ] PWA implementation approach and complexity
-- [ ] Offline data synchronization strategy with SQL Server backend
-- [ ] AI integration approach (Azure OpenAI, OpenAI API, local models) for drill similarity and suggestions
+### Core Technology Stack
 
-## Feature Design & Structure
+- [ ] Backend/database technology - **SPIKE NEEDED: Firebase validation (see Spikes.md - SP01)**
+- [ ] State management approach - **SPIKE NEEDED: Drill management UX spike will determine requirements (see Spikes.md - SP02)**
+- [x] UI framework choice - **DECIDED: Tailwind CSS (familiar, lightweight, flexible)**
+- [x] Hosting/deployment strategy - **DECIDED: Firebase Cloud Functions + Gemini (unified Google ecosystem)**
+- [ ] PWA implementation approach and complexity - **SPIKE NEEDED: PWA validation (see Spikes.md - SP03)**
+- [x] Offline data synchronization strategy - **OBSOLETE: Firestore handles offline sync automatically**
+- [x] Multi-device sync user experience - **OBSOLETE: Firebase Firestore handles real-time sync automatically**
 
-- [ ] Hierarchical tagging system detailed structure (Shot production, Footwork, Tactics, Physical sub-tags)
-- [ ] Drill variant structure and relationships (different ways vs progression variants)
-- [ ] Collaborative editing workflow for shared drill library
-- [ ] Version control approach for drill changes
-- [ ] Player level classification system design
-- [ ] AI-assisted drill creation workflow and similarity detection algorithms
-- [ ] Basic AI deduplication for MVP - scope and implementation approach (simple vs sophisticated)
+### Cross-Cutting AI Strategy
 
-## Phase Planning
+- [ ] AI integration approach for drill similarity detection - **SPIKE NEEDED: AI deduplication PoC (see Spikes.md - SP04)**
 
-- [ ] Define exact features for Phase 1 (Core), Phase 1 (Secondary), Phase 2, and Phase 3+
-- [ ] Prioritize features within each phase
-- [ ] Define MVP scope for initial release
+## Project Planning
 
-## Data Structure & Models
+- [ ] Define exact scope for MVP initial release
+- [ ] Prioritize features within each milestone
+- [ ] Development timeline and sprint planning
 
-- [ ] Drill data model definition.
-- [ ] Session data model definition
-- [ ] User roles and permissions structure
-- [ ] Tag/category data relationships
-- [ ] Court diagram data structure and storage approach
+---
 
-## User Experience & Workflow
-
-- [ ] Session creation workflow (2 toolbox + 3 drills structure)
-- [ ] Drill search and filtering interface design
-- [ ] Multi-device sync user experience
-- [ ] Offline functionality scope and limitations
-
-## Future Considerations
-
-- [ ] Cross-coach coordination features design
-- [ ] Player progress tracking across multiple coaches
-- [ ] Session history and theme analysis features
-- [ ] Data privacy and sharing permissions for multi-coach environment
+**Note**: Feature-specific implementation TODOs have been moved to Backlog.md under their respective features for better organization and context.
