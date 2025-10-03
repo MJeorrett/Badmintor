@@ -216,11 +216,11 @@
 
 **As a badminton coach, I want to:**
 
-- **US10**: Build a session from selected drills so that I have a structured plan for coaching.
-- **US11**: Follow the 2 toolbox + 3 drills structure so that my sessions are well-balanced.
-- **US12**: Add notes to my session plan so that I remember key coaching points.
-- **US13**: Save session plans so that I can reuse successful structures.
-- **US14**: View my session plan offline on my mobile so that I can reference it during coaching.
+- **US08**: Build a session from selected drills so that I have a structured plan for coaching.
+- **US09**: Follow the 2 toolbox + 3 drills structure so that my sessions are well-balanced.
+- **US10**: Add notes to my session plan so that I remember key coaching points.
+- **US11**: Save session plans so that I can reuse successful structures.
+- **US12**: View my session plan offline on my mobile so that I can reference it during coaching.
 
 ### Milestone 3+ - Future Enhancements
 
@@ -228,26 +228,26 @@
 
 **As a badminton coach, I want to:**
 
-- **US15**: Get advanced AI suggestions for drill improvements and coaching patterns.
+- **US13**: Get advanced AI suggestions for drill improvements and coaching patterns.
 
 #### F09 - Court Diagrams & Visual Elements 🏸
 
 **As a badminton coach, I want to:**
 
-- **US16**: Use visual court diagrams to illustrate drill setups.
+- **US14**: Use visual court diagrams to illustrate drill setups.
 
 #### F10 - Session Analytics & History 📊
 
 **As a badminton coach, I want to:**
 
-- **US17**: Analyze my coaching history and discover theme patterns.
-- **US17a**: Get AI suggestions for different drills that train the same theme so that I can maintain focus while providing variety to prevent player boredom.
+- **US15**: Analyze my coaching history and discover theme patterns.
+- **US15a**: Get AI suggestions for different drills that train the same theme so that I can maintain focus while providing variety to prevent player boredom.
 
 #### F11 - Multi-Coach Coordination 👥
 
 **As a badminton coach, I want to:**
 
-- **US18**: Coordinate with other coaches working with the same players.
+- **US16**: Coordinate with other coaches working with the same players.
 
 ---
 

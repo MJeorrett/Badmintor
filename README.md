@@ -40,10 +40,10 @@ _A collaborative drill library and session planning tool for badminton coaches._
 This is my current thinking for the architecture but this may evolve based on spike outcomes.
 
 **Frontend**: React + PWA for offline capabilities  
-**Backend**: Hybrid approach - Firebase (auth, basic CRUD, real-time sync) + .NET API (AI logic, complex operations)  
-**State Management**: Zustand for local UI state  
-**AI Integration**: Azure OpenAI for drill similarity and suggestions  
-**Hosting**: Firebase Hosting (React app) + Azure App Service (.NET API)
+**Backend**: Firebase ecosystem (Firestore, Cloud Functions, Auth, Hosting)  
+**State Management**: To be determined based on UX complexity (likely React built-ins)  
+**AI Integration**: Google Gemini via Firebase Cloud Functions for drill similarity and suggestions  
+**Hosting**: Firebase Hosting (unified ecosystem)
 
 ## Milestones
 

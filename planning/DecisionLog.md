@@ -4,10 +4,7 @@ This document tracks all architectural and product decisions made.
 
 ## Pending Decisions
 
-- **Azure hosting strategy**: App Service vs Container Apps vs Functions for .NET API
-- **Offline data synchronization**: Detailed implementation approach with Firebase
-- **Drill data model**: Structure for variants, tags, and future extensibility
-- **AI integration**: Azure OpenAI vs alternatives, cost optimization
+- **State management**: React built-ins vs Zustand (depends on UX complexity from SP02 spike)
 - **PWA implementation**: Service worker strategy and offline capabilities scope
 
 ## Architecture Decisions
@@ -16,13 +13,15 @@ This document tracks all architectural and product decisions made.
 
 **Date**: October 3, 2025  
 **Status**: Pending Validation  
-**Decision**: Hybrid Firebase + .NET API approach  
+**Decision**: Firebase ecosystem (Firestore + Cloud Functions + Auth + Hosting)  
 **Rationale**:
 
-- Firebase provides excellent offline sync and real-time capabilities for core drill data
-- .NET API leverages existing expertise for complex AI processing logic
-- Firebase Admin SDK allows .NET API to integrate with Firebase data
-  **Alternatives Considered**: Pure .NET + SQL Server, Pure Firebase, Supabase  
+- Unified ecosystem reduces integration complexity
+- Firebase provides excellent offline sync and real-time capabilities
+- Cloud Functions handle AI processing with Google Gemini integration
+- Eliminates need for separate backend infrastructure
+- Automatic multi-device sync and offline functionality
+  **Alternatives Considered**: Hybrid Firebase + .NET API, Pure .NET + SQL Server, Supabase  
   **Validation**: SP01 - Firebase Integration Validation spike
 
 ### AD-002: Frontend UI Framework
@@ -51,6 +50,34 @@ This document tracks all architectural and product decisions made.
   **Alternatives Considered**: Zustand, Redux Toolkit, Context API  
   **Validation**: SP02 - Drill Management UX Design spike
 
+### AD-004: AI Integration Platform
+
+**Date**: October 3, 2025  
+**Status**: Decided  
+**Decision**: Google Gemini via Firebase Cloud Functions  
+**Rationale**:
+
+- Seamless integration with Firebase ecosystem
+- Cloud Functions provide serverless execution for AI processing
+- Google AI integration is native to Firebase platform
+- Cost-effective for MVP usage levels
+  **Alternatives Considered**: Azure OpenAI, OpenAI API, Anthropic Claude  
+  **Impact**: Unified Google ecosystem, simplified architecture
+
+### AD-005: Hosting Strategy
+
+**Date**: October 3, 2025  
+**Status**: Decided  
+**Decision**: Firebase Hosting for complete solution  
+**Rationale**:
+
+- Single platform for frontend, backend, database, and hosting
+- Automatic HTTPS, global CDN, and easy deployment
+- Integrated with other Firebase services
+- Cost-effective for MVP and beyond
+  **Alternatives Considered**: Azure App Service, Netlify, Vercel  
+  **Impact**: Simplified deployment pipeline, unified billing and management
+
 ## Product Decisions
 
 ### PD-001: MVP Scope - Single User
@@ -65,17 +92,18 @@ This document tracks all architectural and product decisions made.
 - Multi-coach features moved to later milestones
   **Impact**: Simplified user management, no role-based permissions needed initially
 
-### PD-002: Equipment Filtering Exclusion
+### PD-002: Offline Functionality Scope
 
 **Date**: October 3, 2025  
 **Status**: Decided  
-**Decision**: Remove equipment filtering from MVP drill search  
+**Decision**: Offline functionality deferred from MVP  
 **Rationale**:
 
-- Badminton equipment is standard and ubiquitous
-- Not a useful filtering criterion for drill selection
-- Simplifies search interface
-  **Impact**: Reduced complexity in search/filtering UI
+- MVP focuses on core drill library functionality
+- Firebase provides offline sync automatically when implemented
+- PWA offline capabilities can be added in future iterations
+- Reduces initial complexity and development time
+  **Impact**: Simpler MVP scope, faster time to market
 
 ---
 
