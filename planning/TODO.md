@@ -18,6 +18,7 @@
 - [ ] Version control approach for drill changes
 - [ ] Player level classification system design
 - [ ] AI-assisted drill creation workflow and similarity detection algorithms
+- [ ] Basic AI deduplication for MVP - scope and implementation approach (simple vs sophisticated)
 
 ## Phase Planning
 
